@@ -29,11 +29,13 @@ const projects = (await getCollection('projects')).sort(
       <ul>
         {projects.map((p) => (
           <li>
-            <a href={`/projects/${p.id}/`}>
-              <h2>{p.data.title}</h2>
-              <p>{p.data.description}</p>
-              <p class="tags">{p.data.tags.join(' · ')}</p>
-            </a>
+            <div class="box">
+              <a href={`/projects/${p.id}/`}>
+                <h2>{p.data.title}</h2>
+                <p>{p.data.description}</p>
+                <p class="tags">{p.data.tags.join(' · ')}</p>
+              </a>
+            </div>
           </li>
         ))}
       </ul>

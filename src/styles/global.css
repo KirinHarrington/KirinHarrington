@@ -150,3 +150,45 @@ hr {
   border-radius: 10px;
   background-color: #f5f1ea;
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Outline version */
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
